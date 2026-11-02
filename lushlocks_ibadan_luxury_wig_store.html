@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LushLocks Ibadan | Luxury Human Hair Wigs</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxuryGold: '#D4AF37',
+                        luxuryGoldLight: '#F3E5AB',
+                        luxuryDark: '#121212',
+                        luxuryCard: '#1E1E1E',
+                        luxuryRose: '#B76E79',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Three.js for 3D Mannequin Simulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #f3f4f6;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-luxuryDark text-gray-100 min-h-screen flex flex-col selection:bg-luxuryGold selection:text-black">
+
+    <!-- Notification Banner -->
+    <div class="bg-gradient-to-r from-luxuryGold via-amber-600 to-luxuryRose text-black text-xs md:text-sm font-semibold py-2 px-4 text-center tracking-wider">
+        <i class="fa-solid fa-crown mr-2"></i> Visit our flagship store at Dugbe Market, Ibadan | Free Nationwide Delivery on Orders Above ₦500,000 | WhatsApp Orders: +234 803 000 LUSH
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-luxuryDark/95 backdrop-blur-md border-b border-luxuryGold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-luxuryGold to-luxuryRose flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-luxuryGold/30 group-hover:scale-105 transition">
+                    LL
+                </div>
+                <div>
+                    <span class="text-2xl font-bold tracking-wider font-serif bg-gradient-to-r from-luxuryGoldLight via-luxuryGold to-luxuryRose bg-clip-text text-transparent">LushLocks</span>
+                    <span class="block text-[10px] uppercase tracking-widest text-luxuryGold/80">Ibadan Luxury Wigs</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#catalog" class="hover:text-luxuryGold transition">Wig Collection (30)</a>
+                <a href="#3d-viewer-section" class="hover:text-luxuryGold transition">3D Mannequin Studio</a>
+                <a href="#about" class="hover:text-luxuryGold transition">About Us</a>
+                <a href="#contact" class="hover:text-luxuryGold transition">Visit Dugbe Store</a>
+            </nav>
+
+            <!-- Actions (Cart & WhatsApp) -->
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/2348030005874?text=Hello%20LushLocks%20Ibadan,%20I%20would%20like%20to%20inquire%20about%20your%20luxury%20wigs." target="_blank" class="hidden sm:inline-flex items-center space-x-2 bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider shadow transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Chat VIP</span>
+                </a>
+                
+                <button onclick="toggleCart()" class="relative bg-luxuryCard border border-luxuryGold/40 hover:border-luxuryGold p-3 rounded-full text-luxuryGold transition flex items-center justify-center">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-luxuryGold text-black font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-luxuryDark via-[#1a1512] to-luxuryDark py-20 lg:py-32 overflow-hidden border-b border-luxuryGold/10">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-luxuryGold/10 border border-luxuryGold/30 px-3 py-1 rounded-full text-luxuryGold text-xs font-semibold uppercase tracking-widest">
+                    <i class="fa-solid fa-star text-[10px]"></i>
+                    <span>Nigeria's Premier Luxury Hair Destination</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold font-serif tracking-tight leading-tight">
+                    Exquisite 100% Virgin Hair, <span class="bg-gradient-to-r from-luxuryGoldLight via-luxuryGold to-luxuryRose bg-clip-text text-transparent">Crafted For Royalty</span>
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Explore our collection of 30 distinct luxury human hair wigs. Ranging from ₦100,000 to ₦1,000,000. Inspect every strand with our interactive 3D mannequin preview before purchasing or visit our physical flagship store at Dugbe Market, Ibadan.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="#catalog" class="w-full sm:w-auto bg-gradient-to-r from-luxuryGold to-amber-600 text-black font-bold px-8 py-4 rounded-full shadow-lg shadow-luxuryGold/20 hover:scale-105 transition text-center uppercase tracking-wider text-sm">
+                        Explore 30 Wigs
+                    </a>
+                    <a href="#3d-viewer-section" class="w-full sm:w-auto bg-luxuryCard border border-luxuryGold/50 hover:bg-luxuryGold/10 text-luxuryGold px-8 py-4 rounded-full font-semibold transition text-center uppercase tracking-wider text-sm">
+                        Try 3D Mannequin
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Quick 3D Preview Card -->
+            <div class="lg:col-span-5">
+                <div class="bg-luxuryCard border border-luxuryGold/30 rounded-3xl p-6 shadow-2xl relative group">
+                    <div class="absolute top-4 right-4 bg-luxuryGold/20 text-luxuryGold text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
+                        Interactive 3D Demo
+                    </div>
+                    <div id="hero-mini-canvas-container" class="w-full h-72 rounded-2xl bg-black/50 overflow-hidden relative cursor-grab active:cursor-grabbing">
+                        <!-- Three.js renders here -->
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="font-serif text-lg text-luxuryGoldLight">Royal Bone Straight 30" HD</h3>
+                        <p class="text-xs text-gray-400 mt-1">Drag to rotate mannequin &bull; 300g Double Drawn</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-xl font-bold font-serif text-white">₦450,000</span>
+                            <button onclick="quickAddHeroItem()" class="bg-luxuryGold text-black font-bold text-xs px-4 py-2 rounded-full uppercase tracking-wider hover:bg-luxuryGoldLight transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive 3D Mannequin Studio Section -->
+    <section id="3d-viewer-section" class="py-16 bg-[#161616] border-b border-luxuryGold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-luxuryGold uppercase tracking-widest text-xs font-semibold">Immersive Styling Studio</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2">Interactive 3D Mannequin Viewer</h2>
+                <p class="text-gray-400 text-sm mt-2">Select any wig from our collection to load it instantly onto the 3D mannequin head. Rotate, inspect density, and view frontal styling in real-time.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-luxuryDark border border-luxuryGold/30 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                <!-- 3D Canvas Column -->
+                <div class="lg:col-span-7 flex flex-col items-center">
+                    <div class="relative w-full h-[400px] sm:h-[480px] bg-black/60 rounded-2xl overflow-hidden border border-luxuryGold/20 shadow-inner">
+                        <div id="main-canvas-container" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+                        <div class="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-luxuryGold/20 text-xs text-luxuryGoldLight flex items-center space-x-2">
+                            <i class="fa-solid fa-arrows-spin animate-spin"></i>
+                            <span>Click & Drag to Rotate 360°</span>
+                        </div>
+                        <div class="absolute top-4 right-4 flex flex-col space-y-2">
+                            <button onclick="zoomMannequin('in')" class="w-9 h-9 bg-luxuryCard/90 hover:bg-luxuryGold hover:text-black text-luxuryGold rounded-xl border border-luxuryGold/40 flex items-center justify-center transition shadow">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                            </button>
+                            <button onclick="zoomMannequin('out')" class="w-9 h-9 bg-luxuryCard/90 hover:bg-luxuryGold hover:text-black text-luxuryGold rounded-xl border border-luxuryGold/40 flex items-center justify-center transition shadow">
+                                <i class="fa-solid fa-minus text-xs"></i>
+                            </button>
+                            <button onclick="resetMannequinView()" class="w-9 h-9 bg-luxuryCard/90 hover:bg-luxuryGold hover:text-black text-luxuryGold rounded-xl border border-luxuryGold/40 flex items-center justify-center transition shadow" title="Reset View">
+                                <i class="fa-solid fa-rotate text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wig Details & Selector Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span id="studio-category" class="text-xs uppercase tracking-wider text-luxuryRose font-semibold">Lace Frontal Wig</span>
+                        <h3 id="studio-title" class="text-2xl sm:text-3xl font-serif font-bold text-white mt-1">Royal Bone Straight 30" HD</h3>
+                        <p id="studio-price" class="text-2xl font-bold font-serif text-luxuryGold mt-2">₦450,000</p>
+                    </div>
+
+                    <p id="studio-desc" class="text-gray-300 text-sm leading-relaxed">
+                        Exquisite 100% raw human hair with ultra-transparent 13x6 HD lace frontal. Bone straight texture with zero tangling and natural bone straight shine.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2 border-t border-luxuryGold/20 text-xs">
+                        <div class="bg-black/30 p-3 rounded-xl border border-luxuryGold/10">
+                            <span class="text-gray-400 block">Length</span>
+                            <span id="studio-length" class="font-semibold text-white text-sm">30 Inches</span>
+                        </div>
+                        <div class="bg-black/30 p-3 rounded-xl border border-luxuryGold/10">
+                            <span class="text-gray-400 block">Density</span>
+                            <span id="studio-density" class="font-semibold text-white text-sm">300% (Double Drawn)</span>
+                        </div>
+                        <div class="bg-black/30 p-3 rounded-xl border border-luxuryGold/10">
+                            <span class="text-gray-400 block">Lace Type</span>
+                            <span id="studio-lace" class="font-semibold text-white text-sm">13x6 HD Transparent</span>
+                        </div>
+                        <div class="bg-black/30 p-3 rounded-xl border border-luxuryGold/10">
+                            <span class="text-gray-400 block">Hair Origin</span>
+                            <span class="font-semibold text-white text-sm">Vietnamese / Raw</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center space-x-4">
+                        <button id="studio-add-btn" onclick="addCurrentStudioItemToCart()" class="flex-1 bg-gradient-to-r from-luxuryGold to-amber-600 hover:opacity-95 text-black font-bold py-3.5 px-6 rounded-xl uppercase tracking-wider text-xs shadow-lg shadow-luxuryGold/20 transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Add to Cart</span>
+                        </button>
+                        <a id="studio-wa-btn" href="#" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold p-3.5 rounded-xl transition flex items-center justify-center shadow" title="Order via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section (30 Wigs) -->
+    <section id="catalog" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-luxuryGold uppercase tracking-widest text-xs font-semibold">Exclusive Inventory</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2">The 30 Luxury Wigs Collection</h2>
+                <p class="text-gray-400 text-sm mt-1">Prices from ₦100,000 to ₦1,000,000. Click any wig to inspect on the 3D Mannequin Studio above.</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+                <button onclick="filterWigs('all')" class="filter-btn bg-luxuryGold text-black text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider transition">All (30)</button>
+                <button onclick="filterWigs('straight')" class="filter-btn bg-luxuryCard border border-luxuryGold/30 text-gray-300 hover:text-luxuryGold text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider transition">Straight</button>
+                <button onclick="filterWigs('curly')" class="filter-btn bg-luxuryCard border border-luxuryGold/30 text-gray-300 hover:text-luxuryGold text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider transition">Curly & Waves</button>
+                <button onclick="filterWigs('bob')" class="filter-btn bg-luxuryCard border border-luxuryGold/30 text-gray-300 hover:text-luxuryGold text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider transition">Bobs & Pixie</button>
+                <button onclick="filterWigs('premium')" class="filter-btn bg-luxuryCard border border-luxuryGold/30 text-gray-300 hover:text-luxuryGold text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider transition">₦500k+ Elite</button>
+            </div>
+        </div>
+
+        <!-- Wig Grid -->
+        <div id="wigs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Dynamically populated via JS -->
+        </div>
+    </section>
+
+    <!-- About & Store Location Section (Dugbe Market Ibadan) -->
+    <section id="contact" class="py-20 bg-[#161616] border-t border-luxuryGold/20 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Store Info & Dugbe Market Details -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-luxuryGold/10 border border-luxuryGold/30 px-3 py-1 rounded-full text-luxuryGold text-xs font-semibold uppercase tracking-widest">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Flagship Physical Store</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold">Visit LushLocks at Dugbe Market, Ibadan</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Prefer to feel the texture in person? Walk into our luxury showroom located in the heart of Dugbe Market, Ibadan. Our expert wig stylists are ready to fit, customize, and style your wig on the spot with complimentary refreshments.
+                    </p>
+
+                    <div class="space-y-4 pt-2 text-sm">
+                        <div class="flex items-start space-x-4 bg-luxuryDark p-4 rounded-2xl border border-luxuryGold/20">
+                            <div class="w-10 h-10 rounded-xl bg-luxuryGold/20 flex items-center justify-center text-luxuryGold text-lg shrink-0">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Physical Address</h4>
+                                <p class="text-gray-400 text-xs mt-1">Shop 14, Luxury Plaza, Opposite Cocoa House, Dugbe Market, Ibadan, Oyo State, Nigeria.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 bg-luxuryDark p-4 rounded-2xl border border-luxuryGold/20">
+                            <div class="w-10 h-10 rounded-xl bg-luxuryGold/20 flex items-center justify-center text-luxuryGold text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Direct Phone & WhatsApp</h4>
+                                <p class="text-gray-400 text-xs mt-1">+234 803 000 5874, +234 812 345 6789</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 bg-luxuryDark p-4 rounded-2xl border border-luxuryGold/20">
+                            <div class="w-10 h-10 rounded-xl bg-luxuryGold/20 flex items-center justify-center text-luxuryGold text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Opening Hours</h4>
+                                <p class="text-gray-400 text-xs mt-1">Monday – Saturday: 9:00 AM – 6:30 PM <br>Sunday: 1:00 PM – 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center space-x-4">
+                        <a href="https://wa.me/2348030005874?text=Hello%20LushLocks%20Ibadan,%20I%20would%20like%20to%20visit%20your%20Dugbe%20store." target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition flex items-center space-x-2 shadow">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Chat with Store Manager</span>
+                        </a>
+                        <a href="tel:+2348030005874" class="bg-luxuryCard border border-luxuryGold/40 hover:border-luxuryGold text-luxuryGold font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition flex items-center space-x-2">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Map Simulation / Storefront Graphic -->
+                <div class="lg:col-span-6">
+                    <div class="bg-luxuryDark border border-luxuryGold/30 rounded-3xl p-6 shadow-2xl relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-transparent z-10 pointer-events-none"></div>
+                        <div class="h-96 rounded-2xl overflow-hidden relative bg-[#1c1c1c] flex flex-col items-center justify-center p-6 text-center">
+                            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                            
+                            <div class="w-16 h-16 rounded-full bg-luxuryGold/20 border border-luxuryGold/50 flex items-center justify-center text-luxuryGold text-3xl mb-4 z-20 animate-bounce">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-white z-20">LushLocks Dugbe Flagship</h3>
+                            <p class="text-luxuryGoldLight text-xs mt-1 z-20 font-medium">Cocoa House Axis, Dugbe Market, Ibadan</p>
+                            <p class="text-gray-400 text-xs mt-3 max-w-sm z-20">Secure parking available &bull; Armed security on site &bull; VIP fitting rooms</p>
+
+                            <div class="mt-6 z-20">
+                                <a href="https://maps.google.com/?q=Dugbe+Market+Ibadan" target="_blank" class="bg-luxuryGold text-black font-bold text-xs px-6 py-3 rounded-full uppercase tracking-wider hover:bg-luxuryGoldLight transition shadow-lg">
+                                    Open in Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Slide-over Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-luxuryDark border-l border-luxuryGold/30 flex flex-col shadow-2xl">
+                <!-- Cart Header -->
+                <div class="p-6 border-b border-luxuryGold/20 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-bag-shopping text-luxuryGold"></i>
+                        <h3 class="font-serif text-xl font-bold text-white">Your Shopping Bag</h3>
+                    </div>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-white p-2">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Cart Items List -->
+                <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-luxuryGold/10">
+                    <!-- Populated via JS -->
+                </div>
+
+                <!-- Cart Footer -->
+                <div class="p-6 border-t border-luxuryGold/20 bg-[#161616] space-y-4">
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-gray-400">Subtotal:</span>
+                        <span id="cart-subtotal" class="font-bold text-xl font-serif text-luxuryGold">₦0</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400">Delivery within Ibadan (Free) or nationwide via DHL/GIG Logistics.</p>
+                    <button onclick="openCheckoutModal()" id="checkout-btn" class="w-full bg-gradient-to-r from-luxuryGold to-amber-600 hover:opacity-95 text-black font-bold py-3.5 rounded-xl uppercase tracking-wider text-xs shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed">
+                        Proceed to Secure Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeCheckoutModal()"></div>
+        <div class="relative bg-luxuryDark border border-luxuryGold/40 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl z-10 my-8">
+            <div class="flex items-center justify-between pb-4 border-b border-luxuryGold/20 mb-6">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-white">Complete Your Order</h3>
+                    <p class="text-xs text-luxuryGoldLight mt-1">LushLocks Ibadan Secure Checkout</p>
+                </div>
+                <button onclick="closeCheckoutModal()" class="text-gray-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <form id="checkout-form" onsubmit="submitOrder(event)" class="space-y-4 text-sm">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Full Name</label>
+                        <input type="text" required id="cust-name" placeholder="Mrs. Folashade Adeleke" class="w-full bg-black/50 border border-luxuryGold/30 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-luxuryGold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Phone Number (WhatsApp)</label>
+                        <input type="tel" required id="cust-phone" placeholder="08031234567" class="w-full bg-black/50 border border-luxuryGold/30 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-luxuryGold">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Delivery Address / Pickup Preference</label>
+                    <textarea required id="cust-address" rows="2" placeholder="House 12, Ring Road Ibadan OR Pickup at Dugbe Market Store" class="w-full bg-black/50 border border-luxuryGold/30 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-luxuryGold"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Payment Method</label>
+                    <select id="payment-method" class="w-full bg-black/50 border border-luxuryGold/30 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-luxuryGold">
+                        <option value="bank-transfer">Direct Bank Transfer (Opay / Moniepoint / GTB)</option>
+                        <option value="store-pickup">Pay on Pickup at Dugbe Market Store (Cash / POS)</option>
+                        <option value="whatsapp-pay">Finalize & Complete via WhatsApp Chat</option>
+                    </select>
+                </div>
+
+                <!-- Bank details info box -->
+                <div id="bank-info-box" class="bg-luxuryCard p-4 rounded-xl border border-luxuryGold/30 text-xs space-y-1">
+                    <p class="font-bold text-luxuryGold">Bank Transfer Details:</p>
+                    <p class="text-gray-300">Bank: Moniepoint MFB</p>
+                    <p class="text-gray-300">Account Number: <span class="font-mono text-white font-bold">8123456789</span></p>
+                    <p class="text-gray-300">Account Name: LushLocks Ibadan Luxury</p>
+                    <p class="text-[10px] text-gray-400 mt-1">Please send transfer receipt via WhatsApp after placing order.</p>
+                </div>
+
+                <div class="pt-4 border-t border-luxuryGold/20 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-gray-400 block">Total Due:</span>
+                        <span id="modal-total-price" class="text-xl font-serif font-bold text-luxuryGold">₦0</span>
+                    </div>
+                    <button type="submit" class="bg-gradient-to-r from-luxuryGold to-amber-600 hover:opacity-95 text-black font-bold px-8 py-3.5 rounded-xl uppercase tracking-wider text-xs shadow-lg transition">
+                        Confirm Order
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Success / Confirmation Modal -->
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md"></div>
+        <div class="relative bg-luxuryDark border border-luxuryGold/40 rounded-3xl max-w-md w-full p-8 text-center space-y-6 z-10 shadow-2xl">
+            <div class="w-20 h-20 bg-luxuryGold/20 border border-luxuryGold text-luxuryGold rounded-full flex items-center justify-center mx-auto text-3xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div>
+                <h3 class="font-serif text-2xl font-bold text-white">Order Placed Successfully!</h3>
+                <p id="success-order-id" class="text-xs text-luxuryGold mt-1 font-mono">Order #LL-8942</p>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+                Thank you for shopping with <span class="text-luxuryGold font-semibold">LushLocks Ibadan</span>. Our customer consultant has received your order and will contact you via WhatsApp or phone shortly.
+            </p>
+            <div class="pt-2 flex flex-col space-y-3">
+                <a id="success-wa-link" href="#" target="_blank" class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat on WhatsApp Now</span>
+                </a>
+                <button onclick="closeSuccessModal()" class="w-full bg-luxuryCard border border-luxuryGold/30 text-gray-300 hover:text-white py-3 rounded-xl text-xs uppercase tracking-wider transition">
+                    Back to Catalog
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-luxuryGold/20 py-12 text-gray-400 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4 md:col-span-1">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-luxuryGold to-luxuryRose flex items-center justify-center text-black font-bold text-lg">
+                        LL
+                    </div>
+                    <span class="text-xl font-bold font-serif text-white">LushLocks Ibadan</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    The ultimate luxury hair brand in Ibadan. Specializing in 100% raw human hair, HD lace frontals, bone straight units, and custom coloring.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-serif font-bold text-white mb-4 text-base">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#catalog" class="hover:text-luxuryGold transition">Wig Collection (30 Wigs)</a></li>
+                    <li><a href="#3d-viewer-section" class="hover:text-luxuryGold transition">3D Mannequin Studio</a></li>
+                    <li><a href="#contact" class="hover:text-luxuryGold transition">Dugbe Market Store</a></li>
+                    <li><a href="https://wa.me/2348030005874" target="_blank" class="hover:text-luxuryGold transition">WhatsApp Support</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif font-bold text-white mb-4 text-base">Store Location</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Shop 14, Luxury Plaza,<br>
+                    Opposite Cocoa House, Dugbe Market,<br>
+                    Ibadan, Oyo State, Nigeria.
+                </p>
+                <p class="text-xs text-luxuryGold mt-2">Tel: +234 803 000 5874</p>
+            </div>
+
+            <div>
+                <h4 class="font-serif font-bold text-white mb-4 text-base">VIP Newsletter</h4>
+                <p class="text-xs text-gray-400 mb-3">Subscribe for weekly new arrivals and Dugbe store discount sales.</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to LushLocks VIP club!');" class="space-y-2">
+                    <input type="email" placeholder="Enter your email" required class="w-full bg-luxuryCard border border-luxuryGold/30 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-luxuryGold">
+                    <button type="submit" class="w-full bg-luxuryGold text-black font-bold py-2 rounded-xl text-xs uppercase tracking-wider hover:bg-luxuryGoldLight transition">Join VIP Club</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-luxuryGold/10 text-center text-xs text-gray-500">
+            &copy; 2026 LushLocks Ibadan. All Rights Reserved. Crafted for Luxury.
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- 30 Wigs Dataset (Prices ranging from ₦100,000 to ₦1,000,000) ---
+        const wigsData = [
+            { id: 1, name: "Royal Bone Straight 12\" Bob", price: 120000, category: "bob", length: "12 Inches", density: "200%", lace: "13x4 HD Lace", desc: "Short, sleek, ultra-straight luxury bob with clean blunt cuts and natural hairline.", color: 0x111111 },
+            { id: 2, name: "Ibadan Diva Bob 14\"", price: 150000, category: "bob", length: "14 Inches", density: "250%", lace: "13x4 Transparent", desc: "Voluminous chin-length bob with soft pre-plucked parting and bleached knots.", color: 0x1a1a1a },
+            { id: 3, name: "Cocoa House Pixie Cut", price: 110000, category: "bob", length: "8 Inches", density: "180%", lace: "Closure 5x5", desc: "Effortlessly chic pixie curl human hair unit designed for busy corporate executives.", color: 0x222222 },
+            { id: 4, name: "Signature Vietnamese Bone Straight 16\"", price: 180000, category: "straight", length: "16 Inches", density: "250%", lace: "13x4 HD Lace", desc: "Medium length pristine raw Vietnamese bone straight hair that holds zero tangles.", color: 0x0f0f0f },
+            { id: 5, name: "Golden Honey Blonde Bob 14\"", price: 195000, category: "bob", length: "14 Inches", density: "250%", lace: "13x4 HD Lace", desc: "Custom colored honey blonde highlights on premium human hair bob.", color: 0xd4af37 },
+            { id: 6, name: "Dugbe Market Special Straight 18\"", price: 210000, category: "straight", length: "18 Inches", density: "250%", lace: "13x4 Transparent", desc: "Everyday luxury straight wig with supreme softness and natural luster.", color: 0x181818 },
+            { id: 7, name: "Luxury Deep Wave 20\"", price: 250000, category: "curly", length: "20 Inches", density: "300%", lace: "13x4 HD Lace", desc: "Bouncy, luxurious deep water curls that cascade effortlessly with vibrant shine.", color: 0x151515 },
+            { id: 8, name: "Oyo Princess Curly 22\"", price: 280000, category: "curly", length: "22 Inches", density: "300%", lace: "13x6 HD Lace", desc: "Tighly wound luxurious bouncy curls for glamorous weekend outings and owambe events.", color: 0x1c1c1c },
+            { id: 9, name: "Raw Cambodian Straight 20\"", price: 270000, category: "straight", length: "20 Inches", density: "250%", lace: "13x4 HD Lace", desc: "Slightly coarse yet silky raw Cambodian hair bundle construction.", color: 0x121212 },
+            { id: 10, name: "Burgundy Wine Coloured Bob 12\"", price: 165000, category: "bob", length: "12 Inches", density: "200%", lace: "13x4 HD Lace", desc: "Rich wine-burgundy tone styled into a sleek middle-part blunt bob.", color: 0x660000 },
+            { id: 11, name: "Super Double Drawn Bone Straight 24\"", price: 320000, category: "straight", length: "24 Inches", density: "300%", lace: "13x6 HD Lace", desc: "Extra thick from root to tip. Full 300g density bone straight luxury unit.", color: 0x101010 },
+            { id: 12, name: "Brazilian Loose Wave 24\"", price: 350000, category: "curly", length: "24 Inches", density: "300%", lace: "13x6 HD Lace", desc: "Soft, flowing loose waves with pre-plucked natural baby hairs.", color: 0x171717 },
+            { id: 13, name: "Chocolate Brown Highlighted Straight 22\"", price: 290000, category: "straight", length: "22 Inches", density: "250%", lace: "13x4 HD Lace", desc: "Gorgeous milk chocolate brown highlights on jet black raw human hair.", color: 0x3d2314 },
+            { id: 14, name: "Kinky Straight Yaki 20\"", price: 260000, category: "straight", length: "20 Inches", density: "250%", lace: "13x4 HD Lace", desc: "Mimics freshly blow-dried African natural hair texture with bone-straight manageability.", color: 0x1a1a1a },
+            { id: 15, name: "Platinum Ice Blonde Bone Straight 26\"", price: 420000, category: "premium", length: "26 Inches", density: "300%", lace: "13x6 HD Lace", desc: "Stunning icy white platinum blonde luxury bone straight unit.", color: 0xe5e7eb },
+            { id: 16, name: "Royal Bone Straight 28\"", price: 400000, category: "straight", length: "28 Inches", density: "300%", lace: "13x6 HD Lace", desc: "Floor-sweeping long luxury straight hair with transparent HD lace.", color: 0x111111 },
+            { id: 17, name: "Water Wave Goddess 26\"", price: 390000, category: "curly", length: "26 Inches", density: "300%", lace: "13x6 HD Lace", desc: "Wet-look water wave curls that stay defined all day long.", color: 0x141414 },
+            { id: 18, name: "Ombre Sunset Blonde Curl 24\"", price: 370000, category: "curly", length: "24 Inches", density: "300%", lace: "13x4 HD Lace", desc: "Dark roots fading into radiant warm sun-kissed blonde curls.", color: 0xb48a45 },
+            { id: 19, name: "Executive Jet Black Bone Straight 30\"", price: 450000, category: "straight", length: "30 Inches", density: "300%", lace: "13x6 HD Transparent", desc: "Exquisite 100% raw human hair with ultra-transparent 13x6 HD lace frontal. Our flagship bestseller.", color: 0x0a0a0a },
+            { id: 20, name: "Cinnamon Copper Body Wave 26\"", price: 430000, category: "premium", length: "26 Inches", density: "300%", lace: "13x6 HD Lace", desc: "Vibrant copper ginger tones in luxurious cascading body waves.", color: 0xb85d26 },
+            { id: 21, name: "Raw Indian Temple Curly 28\"", price: 480000, category: "premium", length: "28 Inches", density: "350%", lace: "13x6 HD Lace", desc: "Authentic temple hair with magnificent bounce and natural luster.", color: 0x1d1d1d },
+            { id: 22, name: "Super Double Drawn Bone Straight 32\"", price: 550000, category: "premium", length: "32 Inches", density: "350%", lace: "13x6 HD Transparent", desc: "Extra long, ultra-thick 32 inches of pristine bone straight perfection.", color: 0x080808 },
+            { id: 23, name: "Custom Colored Balayage Curl 30\"", price: 580000, category: "premium", length: "30 Inches", density: "350%", lace: "13x6 HD Lace", desc: "Hand-painted caramel balayage on voluptuous long curly human hair.", color: 0x4a3525 },
+            { id: 24, name: "The Millionaire's Raw Bone Straight 34\"", price: 680000, category: "premium", length: "34 Inches", density: "400%", lace: "Full Lace HD", desc: "Unmatched 400% density ultra-long raw Vietnamese hair for high net-worth styling.", color: 0x050505 },
+            { id: 25, name: "Grand Imperial Curly Unit 30\"", price: 620000, category: "premium", length: "30 Inches", density: "350%", lace: "Full Lace HD", desc: "Full lace cap construction allowing versatile parting anywhere on the scalp.", color: 0x161616 },
+            { id: 26, name: "LushLocks Diamond Grade Straight 36\"", price: 750000, category: "premium", length: "36 Inches", density: "400%", lace: "Full Lace HD", desc: "The pinnacle of hair engineering. 36 inches of absolute glass-finish straight hair.", color: 0x020202 },
+            { id: 27, name: "Royal Sovereign Curly 34\"", price: 720000, category: "premium", length: "34 Inches", density: "400%", lace: "Full Lace HD", desc: "Majestic long curly tresses with customized baby hair and Swiss lace.", color: 0x191919 },
+            { id: 28, name: "Executive Platinum Blonde 32\"", price: 850000, category: "premium", length: "32 Inches", density: "400%", lace: "Full Lace HD", desc: "Flawless full-lace platinum blonde luxury masterpiece.", color: 0xf3f4f6 },
+            { id: 29, name: "The Dugbe Crown Ultra Bone Straight 38\"", price: 920000, category: "premium", length: "38 Inches", density: "450%", lace: "Full Lace HD", desc: "Breathtaking 38-inch bone straight unit for VIP red carpet appearances.", color: 0x000000 },
+            { id: 30, name: "The Ultimate LushLocks 40\" Sovereign", price: 1000000, category: "premium", length: "40 Inches", density: "500%", lace: "Custom Full Lace HD", desc: "Our ultimate 1,000,000 Naira masterpiece. 40 inches of absolute perfection, custom packaged in a golden treasure box.", color: 0x000000 }
+        ];
+
+        // Format Naira currency
+        function formatNaira(amount) {
+            return '₦' + amount.toLocaleString();
+        }
+
+        // State variables
+        let cart = [];
+        let currentSelectedWig = wigsData[18]; // Default to #19 (Index 18)
+
+        // --- Three.js 3D Mannequin Simulation Setup ---
+        let sceneMain, cameraMain, rendererMain, mannequinMainGroup, wigHairMainMesh;
+        let sceneHero, cameraHero, rendererHero, mannequinHeroGroup, wigHairHeroMesh;
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+
+        function initThreeJS() {
+            // 1. Main Studio Viewer
+            const containerMain = document.getElementById('main-canvas-container');
+            if (containerMain) {
+                sceneMain = new THREE.Scene();
+                sceneMain.background = new THREE.Color(0x0a0a0a);
+
+                cameraMain = new THREE.PerspectiveCamera(40, containerMain.clientWidth / containerMain.clientHeight, 0.1, 1000);
+                cameraMain.position.set(0, 0.2, 5.2);
+
+                rendererMain = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+                rendererMain.setSize(containerMain.clientWidth, containerMain.clientHeight);
+                rendererMain.setPixelRatio(window.devicePixelRatio);
+                containerMain.appendChild(rendererMain.domElement);
+
+                // Professional studio lighting
+                const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+                sceneMain.add(ambientLight);
+
+                const keyLight = new THREE.DirectionalLight(0xfff5e6, 1.4);
+                keyLight.position.set(4, 6, 4);
+                sceneMain.add(keyLight);
+
+                const fillLight = new THREE.DirectionalLight(0xD4AF37, 0.8);
+                fillLight.position.set(-4, 1, 3);
+                sceneMain.add(fillLight);
+
+                const rimLight = new THREE.DirectionalLight(0xB76E79, 1.0);
+                rimLight.position.set(0, -3, -4);
+                sceneMain.add(rimLight);
+
+                // Build Realistic Female Mannequin & Wig in Main Scene
+                mannequinMainGroup = createRealisticFemaleMannequin();
+                sceneMain.add(mannequinMainGroup);
+
+                updateMannequinWig(currentSelectedWig);
+
+                // Mouse Drag & Touch Rotation Events
+                containerMain.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    previousMousePosition = { x: e.clientX, y: e.clientY };
+                });
+
+                window.addEventListener('mousemove', (e) => {
+                    if (!isDragging || !mannequinMainGroup) return;
+                    const deltaX = e.clientX - previousMousePosition.x;
+                    const deltaY = e.clientY - previousMousePosition.y;
+
+                    mannequinMainGroup.rotation.y += deltaX * 0.01;
+                    mannequinMainGroup.rotation.x += deltaY * 0.01;
+                    mannequinMainGroup.rotation.x = Math.max(-0.3, Math.min(0.3, mannequinMainGroup.rotation.x));
+
+                    previousMousePosition = { x: e.clientX, y: e.clientY };
+                });
+
+                window.addEventListener('mouseup', () => { isDragging = false; });
+
+                // Touch support
+                containerMain.addEventListener('touchstart', (e) => {
+                    if (e.touches.length === 1) {
+                        isDragging = true;
+                        previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                    }
+                });
+                containerMain.addEventListener('touchmove', (e) => {
+                    if (!isDragging || !mannequinMainGroup || e.touches.length !== 1) return;
+                    const deltaX = e.touches[0].clientX - previousMousePosition.x;
+                    mannequinMainGroup.rotation.y += deltaX * 0.01;
+                    previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                });
+                containerMain.addEventListener('touchend', () => { isDragging = false; });
+
+                // Animation Loop
+                function animateMain() {
+                    requestAnimationFrame(animateMain);
+                    if (!isDragging && mannequinMainGroup) {
+                        mannequinMainGroup.rotation.y += 0.0025; // Subtle idle rotation
+                    }
+                    rendererMain.render(sceneMain, cameraMain);
+                }
+                animateMain();
+            }
+
+            // 2. Hero Mini Viewer
+            const containerHero = document.getElementById('hero-mini-canvas-container');
+            if (containerHero) {
+                sceneHero = new THREE.Scene();
+                sceneHero.background = new THREE.Color(0x121212);
+
+                cameraHero = new THREE.PerspectiveCamera(40, containerHero.clientWidth / containerHero.clientHeight, 0.1, 1000);
+                cameraHero.position.set(0, 0.2, 5.2);
+
+                rendererHero = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+                rendererHero.setSize(containerHero.clientWidth, containerHero.clientHeight);
+                containerHero.appendChild(rendererHero.domElement);
+
+                sceneHero.add(new THREE.AmbientLight(0xffffff, 0.7));
+                const dLight = new THREE.DirectionalLight(0xD4AF37, 1.2);
+                dLight.position.set(3, 4, 3);
+                sceneHero.add(dLight);
+
+                mannequinHeroGroup = createRealisticFemaleMannequin();
+                sceneHero.add(mannequinHeroGroup);
+                updateHeroWig(wigsData[18]);
+
+                function animateHero() {
+                    requestAnimationFrame(animateHero);
+                    if (mannequinHeroGroup) mannequinHeroGroup.rotation.y += 0.006;
+                    rendererHero.render(sceneHero, cameraHero);
+                }
+                animateHero();
+            }
+        }
+
+        // --- Realistic 3D Female Mannequin Head Construction ---
+        function createRealisticFemaleMannequin() {
+            const group = new THREE.Group();
+
+            // Elegant porcelain/bronze mannequin skin material
+            const skinMaterial = new THREE.MeshPhysicalMaterial({
+                color: 0x3d3024,
+                roughness: 0.25,
+                metalness: 0.15,
+                clearcoat: 0.3,
+                clearcoatRoughness: 0.2
+            });
+
+            // 1. Neck and Shoulders Base
+            const neckGeo = new THREE.CylinderGeometry(0.38, 0.52, 1.3, 32);
+            const neck = new THREE.Mesh(neckGeo, skinMaterial);
+            neck.position.y = -1.2;
+            group.add(neck);
+
+            const shouldersGeo = new THREE.CylinderGeometry(0.8, 1.5, 0.9, 32);
+            const shoulders = new THREE.Mesh(shouldersGeo, skinMaterial);
+            shoulders.position.y = -1.85;
+            group.add(shoulders);
+
+            // 2. Head Skull (Lathe / Ellipsoid contour)
+            const headGeo = new THREE.SphereGeometry(0.82, 32, 32);
+            headGeo.scale(1, 1.32, 1.08);
+            const head = new THREE.Mesh(headGeo, skinMaterial);
+            head.position.y = 0.05;
+            group.add(head);
+
+            // 3. Facial features (Subtle contours for feminine facial definition)
+            const featureMat = new THREE.MeshStandardMaterial({
+                color: 0x33261c,
+                roughness: 0.3,
+                metalness: 0.1
+            });
+
+            // Jaw / Chin definition
+            const chinGeo = new THREE.SphereGeometry(0.3, 16, 16);
+            chinGeo.scale(1.1, 0.7, 0.9);
+            const chin = new THREE.Mesh(chinGeo, skinMaterial);
+            chin.position.set(0, -0.65, 0.65);
+            group.add(chin);
+
+            // Nose Bridge
+            const noseGeo = new THREE.BoxGeometry(0.1, 0.4, 0.25);
+            const nose = new THREE.Mesh(noseGeo, featureMat);
+            nose.position.set(0, -0.05, 0.85);
+            nose.rotation.x = 0.2;
+            group.add(nose);
+
+            // Lips contour
+            const lipsGeo = new THREE.BoxGeometry(0.28, 0.09, 0.15);
+            const lipsMat = new THREE.MeshStandardMaterial({ color: 0x4a2a22, roughness: 0.2 });
+            const lips = new THREE.Mesh(lipsGeo, lipsMat);
+            lips.position.set(0, -0.38, 0.78);
+            group.add(lips);
+
+            // Elegant Eyelash / Brow hint
+            const browGeo = new THREE.BoxGeometry(0.24, 0.04, 0.05);
+            const leftBrow = new THREE.Mesh(browGeo, featureMat);
+            leftBrow.position.set(0.18, 0.3, 0.76);
+            leftBrow.rotation.z = -0.1;
+            group.add(leftBrow);
+
+            const rightBrow = leftBrow.clone();
+            rightBrow.position.x = -0.18;
+            rightBrow.rotation.z = 0.1;
+            group.add(rightBrow);
+
+            return group;
+        }
+
+        // --- Realistic Procedural 3D Hair Rendering for Each Wig Collection ---
+        function updateMannequinWig(wig) {
+            if (!mannequinMainGroup) return;
+
+            if (wigHairMainMesh) {
+                mannequinMainGroup.remove(wigHairMainMesh);
+            }
+
+            const hairGroup = new THREE.Group();
+            const colorHex = wig.color;
+
+            // Advanced hair shader material with specular highlights
+            const hairMaterial = new THREE.MeshStandardMaterial({
+                color: colorHex,
+                roughness: 0.35,
+                metalness: 0.4,
+                side: THREE.DoubleSide
+            });
+
+            // Cap scalp foundation
+            const capGeo = new THREE.SphereGeometry(0.85, 32, 16, 0, Math.PI * 2, 0, Math.PI * 0.62);
+            const cap = new THREE.Mesh(capGeo, hairMaterial);
+            cap.position.y = 0.06;
+            hairGroup.add(cap);
+
+            // Determine length & texture parameters based on wig type
+            let strandLength = 2.0;
+            let segmentsCount = 48;
+            let isCurly = wig.category === 'curly';
+            let isBob = wig.category === 'bob';
+
+            if (wig.length.includes("32") || wig.length.includes("34") || wig.length.includes("36") || wig.length.includes("38") || wig.length.includes("40")) {
+                strandLength = 4.2;
+                segmentsCount = 64;
+            } else if (wig.length.includes("26") || wig.length.includes("28") || wig.length.includes("30")) {
+                strandLength = 3.4;
+                segmentsCount = 56;
+            } else if (wig.length.includes("20") || wig.length.includes("22") || wig.length.includes("24")) {
+                strandLength = 2.7;
+                segmentsCount = 48;
+            } else if (isBob) {
+                strandLength = 1.2;
+                segmentsCount = 40;
+            }
+
+            // Generate realistic procedural hair strands / cascading tresses
+            for (let i = 0; i < segmentsCount; i++) {
+                const angle = (i / segmentsCount) * Math.PI * 2;
+                const radius = 0.81;
+
+                let strandGeo;
+                if (isCurly) {
+                    // Curly / Wave geometry (bouncy spirals)
+                    strandGeo = new THREE.TorusGeometry(0.22, 0.07, 16, 32, Math.PI * 1.5);
+                } else if (isBob) {
+                    // Sleek blunt bob cylinder
+                    strandGeo = new THREE.CylinderGeometry(0.12, 0.22, strandLength, 16);
+                } else {
+                    // Bone straight smooth tresses
+                    strandGeo = new THREE.ConeGeometry(0.16, strandLength, 16);
+                }
+
+                const strand = new THREE.Mesh(strandGeo, hairMaterial);
+
+                if (isCurly) {
+                    strand.position.x = Math.cos(angle) * (radius + 0.1);
+                    strand.position.z = Math.sin(angle) * (radius + 0.1);
+                    strand.position.y = -0.4 - (Math.random() * 0.4);
+                    strand.rotation.x = angle;
+                } else {
+                    strand.position.x = Math.cos(angle) * radius;
+                    strand.position.z = Math.sin(angle) * radius;
+                    strand.position.y = -0.5 - (strandLength / 2);
+                    strand.rotation.z = -Math.cos(angle) * 0.22;
+                    strand.rotation.x = Math.sin(angle) * 0.22;
+                }
+
+                hairGroup.add(strand);
+            }
+
+            // Add frontal lace parting illusion
+            const partingGeo = new THREE.BoxGeometry(0.08, 0.4, 0.05);
+            const partingMat = new THREE.MeshStandardMaterial({ color: 0xebd9c7, roughness: 0.8 });
+            const parting = new THREE.Mesh(partingGeo, partingMat);
+            parting.position.set(0, 0.72, 0.62);
+            hairGroup.add(parting);
+
+            wigHairMainMesh = hairGroup;
+            mannequinMainGroup.add(wigHairMainMesh);
+
+            // Update UI Studio Text & Details
+            document.getElementById('studio-title').innerText = wig.name;
+            document.getElementById('studio-price').innerText = formatNaira(wig.price);
+            document.getElementById('studio-desc').innerText = wig.desc;
+            document.getElementById('studio-length').innerText = wig.length;
+            document.getElementById('studio-density').innerText = wig.density + " (Double Drawn)";
+            document.getElementById('studio-lace').innerText = wig.lace;
+            document.getElementById('studio-category').innerText = wig.category.toUpperCase() + ' WIG';
+            document.getElementById('studio-wa-btn').href = `https://wa.me/2348030005874?text=Hello%20LushLocks%20Ibadan,%20I%20want%20to%20order%20${encodeURIComponent(wig.name)}%20priced%20at%20${encodeURIComponent(formatNaira(wig.price))}`;
+
+            currentSelectedWig = wig;
+        }
+
+        function updateHeroWig(wig) {
+            if (!mannequinHeroGroup) return;
+            if (wigHairHeroMesh) mannequinHeroGroup.remove(wigHairHeroMesh);
+
+            const hairMat = new THREE.MeshStandardMaterial({ color: wig.color, roughness: 0.35, metalness: 0.4 });
+            const hairGroup = new THREE.Group();
+            
+            const cap = new THREE.Mesh(new THREE.SphereGeometry(0.85, 16, 16, 0, Math.PI * 2, 0, Math.PI * 0.62), hairMat);
+            cap.position.y = 0.06;
+            hairGroup.add(cap);
+
+            for (let i = 0; i < 24; i++) {
+                const angle = (i / 24) * Math.PI * 2;
+                const strand = new THREE.Mesh(new THREE.ConeGeometry(0.16, 2.8, 8), hairMat);
+                strand.position.x = Math.cos(angle) * 0.81;
+                strand.position.z = Math.sin(angle) * 0.81;
+                strand.position.y = -1.4;
+                hairGroup.add(strand);
+            }
+
+            wigHairHeroMesh = hairGroup;
+            mannequinHeroGroup.add(wigHairHeroMesh);
+        }
+
+        function zoomMannequin(direction) {
+            if (!cameraMain) return;
+            if (direction === 'in' && cameraMain.position.z > 3.5) cameraMain.position.z -= 0.5;
+            if (direction === 'out' && cameraMain.position.z < 8.0) cameraMain.position.z += 0.5;
+        }
+
+        function resetMannequinView() {
+            if (cameraMain && mannequinMainGroup) {
+                cameraMain.position.set(0, 0, 5.5);
+                mannequinMainGroup.rotation.set(0, 0, 0);
+            }
+        }
+
+        // --- Render 30 Wigs Catalog Grid ---
+        function renderWigsCatalog(filter = 'all') {
+            const grid = document.getElementById('wigs-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            const filteredWigs = filter === 'all' 
+                ? wigsData 
+                : wigsData.filter(w => filter === 'premium' ? w.price >= 500000 : w.category === filter);
+
+            filteredWigs.forEach(wig => {
+                const card = document.createElement('div');
+                card.className = 'bg-luxuryCard border border-luxuryGold/20 hover:border-luxuryGold/60 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 group hover:shadow-xl hover:shadow-luxuryGold/10';
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-48 rounded-2xl bg-black/40 overflow-hidden flex items-center justify-center border border-luxuryGold/10 mb-4">
+                            <div class="absolute top-3 left-3 bg-luxuryDark/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] text-luxuryGold uppercase tracking-wider font-semibold border border-luxuryGold/30">
+                                ${wig.length} &bull; ${wig.density}
+                            </div>
+                            <div class="absolute top-3 right-3 bg-luxuryGold/20 text-luxuryGold w-8 h-8 rounded-full flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <!-- Mini abstract wig visual representation -->
+                            <div class="w-20 h-28 rounded-full bg-gradient-to-b from-amber-700 to-black opacity-90 shadow-2xl group-hover:scale-110 transition duration-500"></div>
+                        </div>
+
+                        <span class="text-[10px] uppercase tracking-widest text-luxuryRose font-semibold">${wig.lace}</span>
+                        <h3 class="font-serif font-bold text-lg text-white mt-1 group-hover:text-luxuryGold transition">${wig.name}</h3>
+                        <p class="text-xs text-gray-400 mt-1 line-clamp-2">${wig.desc}</p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-luxuryGold/10 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-gray-400 block">Price</span>
+                            <span class="text-lg font-bold font-serif text-luxuryGold">${formatNaira(wig.price)}</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="inspectOnMannequin(${wig.id})" class="bg-luxuryDark hover:bg-luxuryGold hover:text-black text-luxuryGold border border-luxuryGold/40 w-9 h-9 rounded-xl flex items-center justify-center transition" title="Inspect on 3D Mannequin">
+                                <i class="fa-solid fa-cube text-xs"></i>
+                            </button>
+                            <button onclick="addToCart(${wig.id})" class="bg-luxuryGold hover:bg-luxuryGoldLight text-black px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterWigs(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-luxuryGold', 'text-black');
+                btn.classList.add('bg-luxuryCard', 'border', 'border-luxuryGold/30', 'text-gray-300');
+            });
+            event.target.classList.remove('bg-luxuryCard', 'border', 'border-luxuryGold/30', 'text-gray-300');
+            event.target.classList.add('bg-luxuryGold', 'text-black');
+            renderWigsCatalog(category);
+        }
+
+        function inspectOnMannequin(id) {
+            const wig = wigsData.find(w => w.id === id);
+            if (wig) {
+                updateMannequinWig(wig);
+                document.getElementById('3d-viewer-section').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // --- Shopping Cart Functions ---
+        function addToCart(id) {
+            const wig = wigsData.find(w => w.id === id);
+            if (!wig) return;
+            
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...wig, qty: 1 });
+            }
+            updateCartUI();
+            toggleCart(true);
+        }
+
+        function quickAddHeroItem() {
+            addToCart(19); // Royal Bone Straight 30"
+        }
+
+        function addCurrentStudioItemToCart() {
+            if (currentSelectedWig) {
+                addToCart(currentSelectedWig.id);
+            }
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cart-badge');
+            const itemsContainer = document.getElementById('cart-items');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            if (totalCount > 0) {
+                badge.innerText = totalCount;
+                badge.classList.remove('hidden');
+                checkoutBtn.removeAttribute('disabled');
+            } else {
+                badge.classList.add('hidden');
+                checkoutBtn.setAttribute('disabled', 'true');
+            }
+
+            subtotalEl.innerText = formatNaira(subtotal);
+            document.getElementById('modal-total-price').innerText = formatNaira(subtotal);
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = `
+                    <div class="text-center py-12 text-gray-400 space-y-3">
+                        <i class="fa-solid fa-bag-shopping text-4xl text-luxuryGold/40"></i>
+                        <p class="text-sm">Your shopping bag is empty.</p>
+                        <p class="text-xs text-gray-500">Select from our 30 luxury wigs collection.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            itemsContainer.innerHTML = '';
+            cart.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'py-4 flex items-center justify-between';
+                div.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-xl bg-black/50 border border-luxuryGold/20 flex items-center justify-center text-luxuryGold font-serif font-bold">
+                            LL
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white font-serif">${item.name}</h4>
+                            <p class="text-[11px] text-luxuryGold font-semibold mt-0.5">${formatNaira(item.price)}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="updateQty(${item.id}, -1)" class="w-7 h-7 bg-luxuryCard border border-luxuryGold/30 rounded-lg text-gray-300 hover:text-white flex items-center justify-center text-xs">-</button>
+                        <span class="text-xs font-bold text-white w-5 text-center">${item.qty}</span>
+                        <button onclick="updateQty(${item.id}, 1)" class="w-7 h-7 bg-luxuryCard border border-luxuryGold/30 rounded-lg text-gray-300 hover:text-white flex items-center justify-center text-xs">+</button>
+                        <button onclick="removeItem(${item.id})" class="text-red-400 hover:text-red-300 p-1 text-xs ml-2"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                `;
+                itemsContainer.appendChild(div);
+            });
+        }
+
+        function updateQty(id, change) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += change;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== id);
+                }
+                updateCartUI();
+            }
+        }
+
+        function removeItem(id) {
+            cart = cart.filter(i => i.id !== id);
+            updateCartUI();
+        }
+
+        function toggleCart(forceOpen = false) {
+            const drawer = document.getElementById('cart-drawer');
+            if (forceOpen) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.toggle('hidden');
+            }
+        }
+
+        // --- Checkout & Order Processing ---
+        function openCheckoutModal() {
+            if (cart.length === 0) return;
+            toggleCart(); // Close cart drawer
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const address = document.getElementById('cust-address').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+
+            const orderId = 'LL-' + Math.floor(1000 + Math.random() * 9000);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            // Build WhatsApp message for instant order forwarding
+            let orderSummaryText = `Hello LushLocks Ibadan, I have placed an order (${orderId}):%0A`;
+            cart.forEach(i => {
+                orderSummaryText += `- ${i.qty}x ${i.name} (${formatNaira(i.price * i.qty)})%0A`;
+            });
+            orderSummaryText += `%0ATotal: ${formatNaira(subtotal)}%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AAddress: ${encodeURIComponent(address)}%0APayment: ${encodeURIComponent(paymentMethod)}`;
+
+            document.getElementById('success-order-id').innerText = `Order ID: ${orderId}`;
+            document.getElementById('success-wa-link').href = `https://wa.me/2348030005874?text=${orderSummaryText}`;
+
+            closeCheckoutModal();
+            document.getElementById('success-modal').classList.remove('hidden');
+            cart = [];
+            updateCartUI();
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        // Initialize on window load
+        window.onload = function() {
+            initThreeJS();
+            renderWigsCatalog('all');
+        };
+    </script>
+</body>
+</html>
